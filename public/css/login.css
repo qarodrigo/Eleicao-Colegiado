@@ -1,0 +1,48 @@
+body{
+    background: rgb(34,193,195);
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); 
+    padding: 20px;
+} 
+
+h1{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+h3{
+    text-align: center;
+    margin-top: 25%;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    
+}
+
+label{
+    font-family: 'Oswald', sans-serif;
+    margin-top: 15px;
+    color: white;
+}
+
+.login{
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(34,193,195);
+    border: none;
+}
+
+.login:hover{
+    background-color: rgba(253,187,45,1);
+}
+
+
+
+.user{
+    /* width: 400px;
+    height: 400px; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 0px; */
+}

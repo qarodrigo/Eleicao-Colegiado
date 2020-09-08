@@ -14,9 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::get('/home', 'VoterController@create')->name('home');
+
 Route::get('/', function () {
-    return redirect()->route('login');
+    return redirect()->route('home');
 });
+
 
 Route::resource('/eleicao', 'VoterController');
 Route::get('/eleicao', 'VoterController@create')->name('eleitor');
@@ -28,8 +31,11 @@ Route::get('/eleicao', 'VoterController@create')->name('eleitor');
 
 Route::group(['middleware' =>  ['auth']],function() {
     Route::resource('/chapas', 'CandidateController');
-    Route::delete('/confirm-delete', 'CandidatesController@delete')->name('confirmacao');
+    Route::delete('/confirm-delete', 'CandidateController@delete')->name('confirmacao');
 });
 
 Auth::routes(['register' => false]);
-Route::get('/home', 'CandidateController@index')->name('home');
+Route::get('/logout',function(){
+    return redirect()->route('login');
+});
+

@@ -10,11 +10,11 @@ return [
     | Here you can change the default title of your admin panel.
     |
     | For more detailed instructions you can look here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/#61-title
+    | e
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Dashboard',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -126,7 +126,7 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-dark-success elevation-4',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
@@ -246,11 +246,16 @@ return [
         ],
         
         
-        ['header' => 'RESULTADOS'],
+        ['header' => 'VOTAÇÃO'],
         [
             'text'       => 'Dashboard',
             'url'        => '#',
             'icon'       => 'fas fa-chart-pie',
+        ],
+        [
+            'text'       => 'Ir Para a Votação',
+            'url'        => '/eleicao',
+            'icon'       => 'fas fa-arrow-circle-right',
         ],
         [
             'text'       => 'Liberar Resultado',

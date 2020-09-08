@@ -20,9 +20,11 @@
             <label for = "description"> Descrição</label>
             <textarea class = "form-control" rows = "3" name = "description"> {{$candidates['description']}}</textarea>
         </div>
-        <button type = "submit" class = "btn btn-outline-success">Salvar</button>
+        <button type = "submit" class = "btn btn-outline-success mx-1">Salvar</button>
+        <button type = "submit" class = "btn btn-outline-danger mx-1">Cancelar</button>       
         <!-- e se eu quiser cancelar? -->
-        <!-- <button type = "submit" class = "btn btn-outline-primary">Cancelar</button> -->
+       
     </div>
 </form>
+
 @endsection

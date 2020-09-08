@@ -1,6 +1,8 @@
 @extends('layouts.form')
 
 @section('content')
+<!-- 
+<a href = "{{route('chapas.index')}}"><p class = "adm">Sou Administrador</p></a> -->
 <div class = "container-fluid background col-sm-4"> 
     <h3 class = "title">VOTAÇÃO PARA O COLEGIADO</h3><br>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis blanditiis hic neque. Sunt illo, iure, veritatis explicabo debitis id voluptatum unde libero labore eligendi quidem fugit dolores aliquam repellendus officiis.</p>
@@ -17,5 +19,8 @@
                 <button type = "input" class = "btn btn-primary vote">Ir Para Votação</button>
         </div>    
     </form>
+
+  
 </div>
+
 @endsection

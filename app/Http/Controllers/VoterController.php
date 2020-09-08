@@ -35,13 +35,13 @@ class VoterController extends Controller
      */
     public function store(Request $request)
     {       
-        $verification = $request->registration;
-        dd($verification);
-        
+        // $verification = $request->registration;
+        // $registration = Voter::where('registration', '=', $verification)->first();
+        // //dd($registration->registration);
         // if($verification == $registration->registration)
-        //     echo("ja tem no banco");
+        //     return redirect()->route('eleicao.create')->with('error', "Você ja votou");
         // else
-        //     echo("pode passar");
+        //     return view('voting.voting');
     }
 
     /**

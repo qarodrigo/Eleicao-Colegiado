@@ -39,21 +39,34 @@ class CandidateController extends Controller
 
         //dd($request->name);
         //mudar para email
-        //  $verification = $request->email;
+        //    $verification = $request->email;
         //  $email = Candidate::where('email', '=', $verification)->first();
         //  //dd($email);
         //  if($verification == $email->email){
         //  }else{
-           Candidate::Create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'description' => $request->description,
-            'president_name' => $request->president_name,
-            'vice_president_name' => $request->vice_president_name,
-                
-            ]);
 
-            return redirect()->route('chapas.index');
+            // $validate = $request->validate([
+            //     'name' => 'min:8', 
+            // ]);
+                
+            //validando campos vazios
+            
+            
+            if($request->name == null || $request->email == null || $request->description == null || $request->president_name == null || $request->vice_president_name == null ){
+                return redirect()->route('chapas.create')->with('error', "Verifique se você preencheu todos os campos!");
+            }else{
+                Candidate::Create([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'description' => $request->description,
+                    'president_name' => $request->president_name,
+                    'vice_president_name' => $request->vice_president_name,
+                        
+                    ]);
+        
+                    return redirect()->route('chapas.index')->with('success', "Chapa adicionada com sucesso");     
+            }           
+           
           //  }
     }
 
