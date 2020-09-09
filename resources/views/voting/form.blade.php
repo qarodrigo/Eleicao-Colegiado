@@ -16,7 +16,8 @@
                 <!-- <small id="emailHelp" class="form-text text-muted">Pensar neste texto</small><br> -->
                 <label for = "registration"> Matricula </label>
                 <input type = "text" class = "form-control" placeholder = "Sua matricula" name = "registration"><br>
-                <button type = "input" class = "btn btn-primary vote">Ir Para Votação</button>
+                <button type = "i   nput" class = "btn btn-primary vote">Ir Para Votação</button>
+                <small><a class = "adm" href = "{{route('chapas.index')}}">Sou Administrador</a></small>
         </div>    
     </form>
 
