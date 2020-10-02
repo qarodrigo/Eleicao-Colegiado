@@ -6,7 +6,7 @@
             <div class = "col-sm-6">
             <!-- <img class = "img-fluid user" src = "/img/user.png"> -->
             </div>
-            <div class = "col-sm-6">
+            <div class = "col-sm-6 teste">
                 
                 <form action = "{{route('login')}}" method = "POST">
                     <h1>Acessar Painel Administrativo</h1>

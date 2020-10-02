@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Voter extends Model
 {
     protected $fillable = [
-        'name', 'email', 'registration',
+        'name', 'email', 'present','vote_id',
     ];
-
     
+    public function Vote(){
+        return $this->hasOne('App/Vote');
+    }
 }

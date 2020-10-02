@@ -258,6 +258,11 @@ return [
             'icon'       => 'fas fa-arrow-circle-right',
         ],
         [
+            'text'       => 'Adicionar Eleitores',
+            'url'        => '/eleitores',
+            'icon'       => 'fas fa-user',
+        ],
+        [
             'text'       => 'Liberar Resultado',
             'url'        => '#',
             'icon'       => 'fas fa-share-alt',

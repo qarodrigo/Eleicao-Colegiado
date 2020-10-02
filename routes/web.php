@@ -22,20 +22,23 @@ Route::get('/', function () {
 
 
 Route::resource('/eleicao', 'VoterController');
-Route::get('/eleicao', 'VoterController@create')->name('eleitor');
+Route::get('/eleicao', 'VoterController@create')->name('form');
 
-// Route::get('/eleicao', function () {
-//     return view('voting.form');
-// });
-
+Route::get('/eleitores', function(){
+    return view('candidates.uploadFile');
+});
 
 Route::group(['middleware' =>  ['auth']],function() {
     Route::resource('/chapas', 'CandidateController');
-    Route::delete('/confirm-delete', 'CandidateController@delete')->name('confirmacao');
+    //Route::delete('/confirm-delete', 'CandidateController@delete')->name('confirmacao');
 });
+
 
 Auth::routes(['register' => false]);
 Route::get('/logout',function(){
     return redirect()->route('login');
 });
 
+//upload file
+Route::get('/eleitores', 'UploadFileController@getPageUpload');
+Route::post('/eleitores', 'UploadFileController@fileImport')->name('upload');

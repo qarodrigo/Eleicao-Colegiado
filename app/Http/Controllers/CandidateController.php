@@ -12,6 +12,10 @@ class CandidateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     
+
+
     public function index()
     {
         $candidates = Candidate::all();
@@ -68,6 +72,10 @@ class CandidateController extends Controller
             }           
            
           //  }
+    }
+
+    public function getFile(){
+        
     }
 
     /**

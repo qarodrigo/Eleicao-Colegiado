@@ -25,11 +25,11 @@
             <label for = "description"> Descrição</label>
             <textarea class = "form-control" placeholder = "Descrição" rows = "3" name = "description"></textarea>
         </div>
-        <!-- <label for = "vice_president_name"> Adicionar arquivo </label>
+        <label for = "vice_president_name"> Adicionar arquivo </label>
         <div class="custom-file">
-            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name = "file">
             <label class="custom-file-label" for="inputGroupFile01">Escolher arquivo</label> <br><br>
-        </div> -->
+        </div>
         <button type="submit" class="btn btn-outline-success" style = "display: block; margin-left: auto; margin-right: auto;"><i class = "fas fa-plus-square"></i>  Adicionar</button>
     </div>
 </form>

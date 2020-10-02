@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Voter;
+use App\Candidate;
 use Illuminate\Http\Request;
 
 class VoterController extends Controller
@@ -35,9 +36,22 @@ class VoterController extends Controller
      */
     public function store(Request $request)
     {       
-        // $verification = $request->registration;
-        // $registration = Voter::where('registration', '=', $verification)->first();
-        // //dd($registration->registration);
+        
+        if($request->name == null || $request->email == null){
+            return redirect()->route('form')->with('error', "Verifique se você preencheu todos os campos!");
+        }else{
+        
+            $verification = $request->email;
+            $email = Voter::where('email', '=', $verification)->first();
+            if($email){
+                $candidates = Candidate::all();
+                return view('voting.poll', ['email' => $verification], ['candidates' => $candidates]);
+            }else{
+                return redirect()->route('form')->with('error', "A sua matricula não está cadastrada.");
+            }
+
+        }
+
         // if($verification == $registration->registration)
         //     return redirect()->route('eleicao.create')->with('error', "Você ja votou");
         // else
